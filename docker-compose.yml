@@ -4,6 +4,6 @@ services:
   web:
     image: nginx
     ports:
-      - "9092:80"
+      - "9093:80"
     volumes:
       - .:/usr/share/nginx/html
