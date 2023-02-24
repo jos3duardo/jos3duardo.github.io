@@ -8,3 +8,9 @@ services:
       - "9093:80"
     volumes:
       - .:/usr/share/nginx/html
+    networks:
+      - servidor-network
+
+networks:
+  servidor-network:
+    external: true
