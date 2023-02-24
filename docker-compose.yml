@@ -1,7 +1,8 @@
 version: '3'
 
 services:
-  web:
+  jos3duardo:
+    container_name: jos3duardo
     image: nginx
     ports:
       - "9093:80"
