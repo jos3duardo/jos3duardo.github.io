@@ -4,6 +4,7 @@ services:
   jos3duardo:
     container_name: jos3duardo
     image: nginx
+    restart: "unless-stopped"
     ports:
       - "9093:80"
     volumes:
