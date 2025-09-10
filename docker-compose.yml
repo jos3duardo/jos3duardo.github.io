@@ -1,7 +1,9 @@
+version: "3"
+
 services:
   jos3duardo:
     image: nginx
-    restart: "unless-stopped"
+    restart: unless-stopped
     volumes:
       - .:/usr/share/nginx/html
     networks:
