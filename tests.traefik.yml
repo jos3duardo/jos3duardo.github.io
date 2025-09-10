@@ -1,0 +1,38 @@
+version: "3.7"
+services:
+  traefik:
+    image: traefik:v2.11.2
+    command:
+      - "--api.dashboard=true"
+      - "--providers.docker=true"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.letsencrypt.acme.email=seu-email@dominio.com"
+      - "--certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json"
+      - "--certificatesresolvers.letsencrypt.acme.httpchallenge.entrypoint=web"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - "vol_traefik_certificates:/letsencrypt"
+    networks:
+      - traefik-net
+    restart: unless-stopped
+  whoami:
+    image: traefik/whoami
+    networks:
+      - traefik-net
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.whoami.rule=Host(`teste.jos3duardo.com.br`)"
+        - "traefik.http.routers.whoami.entrypoints=websecure"
+        - "traefik.http.routers.whoami.tls.certresolver=letsencrypt"
+
+networks:
+  traefik-net:
+    external: true
+
+volumes:
+  vol_traefik_certificates:

@@ -1,15 +1,14 @@
-version: "3"
+version: '3'
 
 services:
   jos3duardo:
+    container_name: jos3duardo
     image: nginx
-    restart: unless-stopped
     volumes:
       - .:/usr/share/nginx/html
     networks:
-      - traefik-net
-    deploy:
-      labels:
+      - servidor-network
+    labels:
         - "traefik.enable=true"
         - "traefik.http.routers.homepage.rule=Host(`jos3duardo.com.br`)"
         - "traefik.http.routers.homepage.entrypoints=websecure"
@@ -17,5 +16,5 @@ services:
         - "traefik.http.services.homepage.loadbalancer.server.port=80"
 
 networks:
-  traefik-net:
+  servidor-network:
     external: true
