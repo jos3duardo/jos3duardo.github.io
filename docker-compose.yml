@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   jos3duardo:
@@ -7,14 +7,14 @@ services:
     volumes:
       - .:/usr/share/nginx/html
     networks:
-      - servidor-network
+      - proxy
     labels:
-        - "traefik.enable=true"
-        - "traefik.http.routers.homepage.rule=Host(`jos3duardo.com.br`)"
-        - "traefik.http.routers.homepage.entrypoints=websecure"
-        - "traefik.http.routers.homepage.tls.certresolver=letsencrypt"
-        - "traefik.http.services.homepage.loadbalancer.server.port=80"
+      - "traefik.enable=true"
+      - "traefik.http.routers.homepage.rule=Host(`jos3duardo.com.br`)"
+      - "traefik.http.routers.homepage.entrypoints=websecure"
+      - "traefik.http.routers.homepage.tls.certresolver=letsencrypt"
+      - "traefik.http.services.homepage.loadbalancer.server.port=80"
 
 networks:
-  servidor-network:
+  proxy:
     external: true
