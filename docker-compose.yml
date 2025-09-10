@@ -1,17 +1,19 @@
-version: '3'
-
 services:
   jos3duardo:
-    container_name: jos3duardo
     image: nginx
     restart: "unless-stopped"
-    ports:
-      - "9093:80"
     volumes:
       - .:/usr/share/nginx/html
     networks:
-      - servidor-network
+      - traefik-net
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.homepage.rule=Host(`jos3duardo.com.br`)"
+        - "traefik.http.routers.homepage.entrypoints=websecure"
+        - "traefik.http.routers.homepage.tls.certresolver=letsencrypt"
+        - "traefik.http.services.homepage.loadbalancer.server.port=80"
 
 networks:
-  servidor-network:
+  traefik-net:
     external: true
