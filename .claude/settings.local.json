@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s \"https://api.github.com/users/jos3duardo/repos?sort=updated&per_page=30&type=public\")",
+      "Bash(curl -s \"https://api.github.com/users/jos3duardo/repos?sort=updated&per_page=30&type=public&page=2\")",
+      "Bash(curl -s \"https://api.github.com/users/jos3duardo/repos?sort=updated&per_page=30&type=public&page=3\")",
+      "Bash(curl -s \"https://api.github.com/users/jos3duardo/repos?per_page=100&type=public\")",
+      "Bash(curl -s \"https://api.github.com/users/jos3duardo/repos?per_page=100&type=public&sort=created&direction=desc\")",
+      "Bash(gh repo:*)"
+    ]
+  }
+}

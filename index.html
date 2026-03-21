@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
 	<script async defer src="https://tianji.jos3duardo.com.br/tracker.js" data-website-id="cmd9s1vtb00011yjidbd5ouj5"></script>
 
-	<title>Jose3duardo</title>
+	<title>José Eduardo | Software Engineer</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="José Eduardo Lopes de Souza - Software Engineer. Portfólio pessoal com projetos, experiência e habilidades.">
+
+	<!-- Font Awesome 6 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 	<!-- CSS Links go here -->
 	<link href="assets/css/main.css" rel="stylesheet" type="text/css">
@@ -17,9 +21,9 @@
 <body>
 <img src="https://tianji.jos3duardo.com.br/telemetry/clnzoxcy10001vy2ohi4obbi0/cmd9wlvxn00k3kls0czuizv8x/badge.svg" alt="" style="width:1px;height:1px; display:none" />
 
-
-	<!-- PartcilesJS splash section -->
+	<!-- Particles background for entire page -->
 	<div id="particles-js">
+		<!-- Hero Section -->
 		<div class="header">
 			<h1>
 				<span class="site-title">José Eduardo Lopes de Souza</span>
@@ -27,33 +31,259 @@
 			</h1>
 			<div class="header-icons">
 				<a aria-label="Send email" href="mailto:jos3duardolopes@gmail.com">
-					<i class="icon fa fa-envelope"></i>
+					<i class="icon fa-solid fa-envelope"></i>
 				</a>
 				<a aria-label="My Twitter" target="_blank" href="https://x.com/jos3duardolopes">
-					<i class="icon fa fa-twitter" aria-hidden="true"></i>
+					<i class="icon fa-brands fa-x-twitter" aria-hidden="true"></i>
 				</a>
 				<a aria-label="My LinkedIn" target="_blank" href="https://www.linkedin.com/in/jos3duardolopes/">
-					<i class="icon fa fa-linkedin" aria-hidden="true"></i>
+					<i class="icon fa-brands fa-linkedin-in" aria-hidden="true"></i>
 				</a>
 				<a aria-label="My Github" target="_blank" href="https://github.com/jos3duardo">
-					<i class="icon fa fa-github-alt" aria-hidden="true"></i>
+					<i class="icon fa-brands fa-github" aria-hidden="true"></i>
 				</a>
 				<a aria-label="My Youtube" target="_blank" href="https://www.youtube.com/channel/UCwL8ydVzWFkrhLNRUobzCkA">
-					<i class="icon fa fa-youtube-play" aria-hidden="true"></i>
+					<i class="icon fa-brands fa-youtube" aria-hidden="true"></i>
 				</a>
 			</div>
+			<div class="header-links">
+				<a class="link" href="#about" data-scroll>Sobre</a>
+				<a class="link" href="#skills" data-scroll>Skills</a>
+				<a class="link" href="#projects" data-scroll>Projetos</a>
+				<a class="link" href="#experience" data-scroll>Experiência</a>
+				<a class="link" href="#contact" data-scroll>Contato</a>
+			</div>
 		</div>
-		<canvas class="particles-js-canvas-el" width="2702" height="1466" style="width: 100%; height: 100%;"></canvas>
+		<a class="down" href="#about" data-scroll>
+			<i class="icon fa-solid fa-chevron-down" aria-hidden="true"></i>
+		</a>
 	</div>
+
+	<!-- Page content wrapper -->
+	<div id="page-content">
+
+		<!-- About Section -->
+		<section id="about" class="section-dark">
+			<div class="section-inner">
+				<h1>Sobre Mim</h1>
+				<p>
+					Sou engenheiro de software apaixonado por tecnologia, com experiência em desenvolvimento de aplicações
+					escaláveis e soluções de infraestrutura. Gosto de trabalhar com desafios complexos, aprender novas
+					tecnologias e compartilhar conhecimento com a comunidade. Quando não estou codando, você pode me
+					encontrar explorando ferramentas de DevOps, contribuindo com projetos open source ou criando conteúdo
+					técnico.
+					<!-- TODO: Personalize este texto com sua história real -->
+				</p>
+			</div>
+		</section>
+
+		<!-- Skills Section -->
+		<section id="skills" class="section-dark">
+			<div class="section-inner">
+				<h1>Skills</h1>
+				<div class="skills-grid">
+					<div class="skill-card">
+						<h2>Backend</h2>
+						<i class="devicon-nodejs-plain colored"></i>
+						<i class="devicon-php-plain colored"></i>
+					</div>
+					<div class="skill-card">
+						<h2>DevOps & Infra</h2>
+						<i class="devicon-docker-plain colored"></i>
+						<i class="devicon-linux-plain colored"></i>
+						<i class="devicon-amazonwebservices-original colored"></i>
+						<i class="devicon-nginx-original colored"></i>
+						<i class="devicon-git-plain colored"></i>
+					</div>
+					<div class="skill-card">
+						<h2>Banco de Dados</h2>
+						<i class="devicon-postgresql-plain colored"></i>
+						<i class="devicon-mysql-plain colored"></i>
+						<i class="devicon-mongodb-plain colored"></i>
+						<i class="devicon-redis-plain colored"></i>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Projects Section -->
+		<section id="projects" class="section-dark">
+			<div class="section-inner">
+				<h1>Projetos</h1>
+				<div class="projects-grid">
+					<div class="project-card">
+						<h3>Node CEP Correios</h3>
+						<p>Sistema de busca de CEPs com suporte a múltiplas requisições simultâneas.</p>
+						<div class="project-tags">
+							<span class="tag">JavaScript</span>
+							<span class="tag">Node.js</span>
+						</div>
+						<a class="project-link" target="_blank" href="https://github.com/jos3duardo/node-cep-correios">Ver Projeto</a>
+					</div>
+
+					<div class="project-card">
+						<h3>CNPJ-WS</h3>
+						<p>Package Node.js para consulta de CNPJ de forma simples e rápida.</p>
+						<div class="project-tags">
+							<span class="tag">JavaScript</span>
+							<span class="tag">Node.js</span>
+							<span class="tag">API</span>
+						</div>
+						<a class="project-link" target="_blank" href="https://github.com/jos3duardo/cnpj-ws">Ver Projeto</a>
+					</div>
+
+					<div class="project-card">
+						<h3>Brag Doc</h3>
+						<p>Aplicação para registro e acompanhamento de conquistas profissionais.</p>
+						<div class="project-tags">
+							<span class="tag">TypeScript</span>
+							<span class="tag">NestJS</span>
+							<span class="tag">MongoDB</span>
+						</div>
+					</div>
+
+					<div class="project-card">
+						<h3>Portal de Notícias</h3>
+						<p>Portal de notícias com gerenciamento de conteúdo, categorias e publicação de artigos.</p>
+						<div class="project-tags">
+							<span class="tag">TypeScript</span>
+							<span class="tag">NestJS</span>
+							<span class="tag">PostgreSQL</span>
+						</div>
+						<a class="project-link" target="_blank" href="https://bytevalor.news/">Ver Projeto</a>
+					</div>
+
+					<div class="project-card">
+						<h3>BP Tracker</h3>
+						<p>Sistema para monitoramento e registro de pressão arterial, com histórico de medições.</p>
+						<div class="project-tags">
+							<span class="tag">TypeScript</span>
+							<span class="tag">NestJS</span>
+							<span class="tag">PostgreSQL</span>
+						</div>
+						<a class="project-link" target="_blank" href="https://bptracker.jos3duardo.com.br/dashboard">Ver Projeto</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Experience Section -->
+		<section id="experience" class="section-dark">
+			<div class="section-inner">
+				<h1>Experiência</h1>
+				<div class="timeline">
+					<div class="entry">
+						<div class="title">
+							<h3>Abr 2018 - Nov 2018</h3>
+							<p>Agencia Mit</p>
+						</div>
+						<div class="body">
+							<p>Desenvolvedor Web - Estágio <span class="company-name">@ Agencia Mit</span></p>
+							<ul>
+								<li>Criação de sistemas empresariais e páginas institucionais</li>
+								<li>Desenvolvimento de aplicativos para iOS e Android</li>
+							</ul>
+						</div>
+					</div>
+					<div class="entry">
+						<div class="title">
+							<h3>Jun 2019 - Jul 2020</h3>
+							<p>Quality Sistemas</p>
+						</div>
+						<div class="body">
+							<p>Desenvolvedor Full Stack <span class="company-name">@ Quality Sistemas</span></p>
+							<ul>
+								<li>Desenvolvimento full stack com PHP estruturado, Laravel e Symfony</li>
+								<li>Manutenção e evolução de sistemas legados</li>
+								<li>Bancos de dados MySQL e PostgreSQL</li>
+							</ul>
+						</div>
+					</div>
+					<div class="entry">
+						<div class="title">
+							<h3>Jul 2020 - Fev 2021</h3>
+							<p>Before</p>
+						</div>
+						<div class="body">
+							<p>Desenvolvedor Backend <span class="company-name">@ Before</span></p>
+							<ul>
+								<li>Desenvolvimento backend com PHP (Laravel) e PostgreSQL para a área de vendas da Vivo</li>
+								<li>Soluções para aplicativo mobile e backoffice em nível nacional</li>
+								<li>Monitoramento e análise de logs com Kibana</li>
+							</ul>
+						</div>
+					</div>
+					<div class="entry">
+						<div class="title">
+							<h3>Fev 2023 - Set 2023</h3>
+							<p>MB Labs</p>
+						</div>
+						<div class="body">
+							<p>Desenvolvedor Node <span class="company-name">@ MB Labs</span></p>
+							<ul>
+								<li>Desenvolvimento de integrações com o ecossistema OpenFinance</li>
+								<li>Stack: Node.js, NestJS, PostgreSQL com arquitetura cloud na AWS</li>
+								<li>Resolução de incidentes em produção no time de sustentação</li>
+							</ul>
+						</div>
+					</div>
+					<div class="entry">
+						<div class="title">
+							<h3>Fev 2021 - Presente</h3>
+							<p>Grupo Imagetech</p>
+						</div>
+						<div class="body">
+							<p>Tech Lead <span class="company-name">@ Grupo Imagetech</span></p>
+							<ul>
+								<li>Liderança técnica do time de Backend, com foco em entregas de alta qualidade</li>
+								<li>Desenvolvimento de soluções com PHP (Laravel), Node.js (NestJS), PostgreSQL, MongoDB</li>
+								<li>Gestão de infraestrutura com Docker, Kubernetes e CI/CD (GitLab)</li>
+								<li>Revisão de código, testes automatizados e mentoria do time</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section id="contact" class="section-dark">
+			<div class="section-inner">
+				<h1>Vamos Conversar?</h1>
+				<p>
+					Estou sempre aberto a novas oportunidades, colaborações e boas conversas sobre tecnologia.
+					Sinta-se à vontade para entrar em contato!
+				</p>
+				<div class="header-icons contact-icons">
+					<a aria-label="Send email" href="mailto:jos3duardolopes@gmail.com">
+						<i class="icon fa-solid fa-envelope"></i>
+					</a>
+					<a aria-label="My LinkedIn" target="_blank" href="https://www.linkedin.com/in/jos3duardolopes/">
+						<i class="icon fa-brands fa-linkedin-in" aria-hidden="true"></i>
+					</a>
+					<a aria-label="My Github" target="_blank" href="https://github.com/jos3duardo">
+						<i class="icon fa-brands fa-github" aria-hidden="true"></i>
+					</a>
+					<a aria-label="My Twitter" target="_blank" href="https://x.com/jos3duardolopes">
+						<i class="icon fa-brands fa-x-twitter" aria-hidden="true"></i>
+					</a>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<p>&copy; 2026 José Eduardo Lopes de Souza</p>
+	</footer>
 
 	<!-- Javascript plugins -->
 	<script src="assets/js/particles.min.js"></script>
 	<script src="assets/js/sweet-scroll.min.js"></script>
 
 	<!-- Custom scripts -->
-  	<script src="assets/js/main.js"></script>
-
-	<script type="text/javascript"></script>
+	<script src="assets/js/main.js"></script>
 </body>
 
 </html>
