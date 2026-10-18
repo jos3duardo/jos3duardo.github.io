@@ -4,14 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Static personal portfolio/landing page for José Eduardo Lopes de Souza (jos3duardo.com.br), hosted via GitHub Pages. Single-page site with a particles.js animated background, social links, and analytics tracking via Tianji.
+Static personal portfolio/landing page for José Eduardo Lopes de Souza (jos3duardo.com.br), hosted via GitHub Pages. Single-page site, no JavaScript of its own: the name in the hero is "printed" layer by layer (CSS clip-path with steps(), stripes as FDM layer lines). Analytics via Tianji.
 
 ## Architecture
 
 - **`index.html`** — The entire site is a single HTML file. No build step, no static site generator.
-- **`assets/`** — CSS (`main.css`, `timeline.css`), JS (`main.js`, `particles.min.js`, `sweet-scroll.min.js`), and fonts (Font Awesome, Devicon).
-- **`main.js`** — Initializes SweetScroll and particles.js with configuration (polygon particles, white on dark background).
-- **`main.css`** — Large hand-written stylesheet (not generated). Timeline styles are separate in `timeline.css`.
+- **`assets/css/style.css`** — The only stylesheet. Color tokens on `:root`, dark mode via `prefers-color-scheme`. Fonts (Bricolage Grotesque, Schibsted Grotesk) come from Google Fonts.
+- Sections use a two-column grid (section name rail + content); the experience timeline is an `<ol reversed>`.
 
 ## Deployment
 
@@ -21,7 +20,7 @@ Static personal portfolio/landing page for José Eduardo Lopes de Souza (jos3dua
 
 ## Local Development
 
-Open `index.html` directly in a browser — no server or build required. For Docker-based serving:
+Open `index.html` directly in a browser, or `python3 -m http.server 8090`. For Docker-based serving:
 
 ```bash
 docker compose up -d
