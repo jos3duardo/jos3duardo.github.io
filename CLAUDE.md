@@ -15,6 +15,7 @@ Static personal portfolio/landing page for José Eduardo Lopes de Souza (jos3dua
 ## Deployment
 
 - **GitHub Pages** serves the site directly from the `master` branch — any push to `master` deploys.
+- **Production today** is the nginx container on oci-pessoal serving the clone at `~/projetos/jos3duardo/jos3duardo.github.io`: deploy = push to `master`, then `git pull` there (and `docker compose up -d` when `docker-compose.yml`/`nginx.conf` change). `nginx.conf` returns 404 for dotfiles (`.git`, `.claude`) and repo-internal files — new internal files at the root must be added there.
 - **Docker/Traefik** (`docker-compose.yml`) — Alternative self-hosted deployment using nginx + Traefik reverse proxy with Let's Encrypt TLS on domain `jos3duardo.com.br`. Requires an external Docker network named `proxy`.
 - **`tests.traefik.yml`** — Standalone Traefik test config with a whoami service on `teste.jos3duardo.com.br`.
 
@@ -28,4 +29,4 @@ docker compose up -d
 
 ## Analytics
 
-Tianji analytics is embedded via a tracker script and a tracking pixel in `index.html`, pointing to `tianji.jos3duardo.com.br`.
+Tianji analytics is embedded via the tracker script in `index.html`. Tianji is self-hosted on oci-pessoal (`~/projetos/docker-compose/tianji`) at `tianji.jos3duardo.com.br`.

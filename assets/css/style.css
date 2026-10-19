@@ -66,14 +66,6 @@ a:hover {
 	border-radius: 2px;
 }
 
-.pixel {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	opacity: 0;
-	pointer-events: none;
-}
-
 .skip {
 	position: absolute;
 	left: var(--gutter);
